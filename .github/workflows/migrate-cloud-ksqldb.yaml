@@ -15,4 +15,4 @@ jobs:
           from_file: 'ksql-migrations.properties'
           to_file: 'ksql-migrations.properties'
           commit: 'false'
-      - uses: ./.github/actions/ksqldb-migrations-action/action.yaml
+      - uses: ./.github/actions/ksqldb-migrations-action
