@@ -10,6 +10,8 @@ inputs:
 runs:
   using: docker
   image: docker://confluentinc/ksqldb-cli:0.17.0
-  args: |
-    ksql-migrations validate -c ${{ inputs.config }} && \
-    ksql-migrations apply -a -c ${{ inputs.config }}
+  args:
+    - ksql-migrations
+    - validate
+    - c
+    - ${{ inputs.config }}
