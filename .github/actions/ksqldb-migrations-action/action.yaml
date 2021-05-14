@@ -1,0 +1,14 @@
+name: ksqlDB Migrations Action
+description: migrate ksqlDB schema with GitHub actions
+inputs:
+  config:
+    description: Path to config file
+    default: filesystem:./ksql-migrations.properties
+  migrations:
+    description: Path to migrations directory
+    default: filesystem:./migrations
+runs:
+  using: docker
+  image: docker://confluentinc/ksqldb-cli:0.17.0
+  args:
+    ksql-migrations apply -a -c ${{ inputs.config }}
