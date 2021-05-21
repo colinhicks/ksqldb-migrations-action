@@ -1,5 +1,5 @@
-name: ksqlDB Migrations Action
-description: migrate ksqlDB schema with GitHub actions
+name: ksqlDB Migrations Validate
+description: validate ksqlDB schema with GitHub actions
 inputs:
   config:
     description: Path to config file
